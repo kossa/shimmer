@@ -1,19 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="col-1">
+      <circleShimmer size="40px" />
+    </div>
+    <div class="col-2">
+      <h1>
+        <textShimmer />
+      </h1>
+      <small>
+        <textShimmer />
+      </small>
+      <p>
+        <sentencesShimmer lines="6" />
+      </p>
+    </div>
+    <blockShimmer height="50px" width="60px" />
+    <imageShimmer height="50" width="60" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import {
+  blockShimmer,
+  circleShimmer,
+  imageShimmer,
+  sentencesShimmer,
+  textShimmer,
+} from "shimmer";
 
 export default {
-  name: 'App',
+  name: "App",
+
   components: {
-    HelloWorld
-  }
-}
+    blockShimmer,
+    circleShimmer,
+    imageShimmer,
+    sentencesShimmer,
+    textShimmer,
+  },
+};
 </script>
 
 <style>
